@@ -1,26 +1,33 @@
+<style>
+body{
+background:#ffeef3;
+font-family:Arial;
+text-align:center;
+overflow:hidden;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Anniversary ❤️</title>
-</head>
+.heart{
+position:fixed;
+bottom:-20px;
+color:red;
+font-size:25px;
+animation:float 6s linear infinite;
+}
 
-<body style="background:#ffedf3;text-align:center;font-family:Arial;padding-top:100px;">
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+</style>
 
-<h1 style="color:#ff2d75;font-size:45px;">
-Happy Anniversary, My Love ❤️
-</h1>
-
-<p style="font-size:22px;">
-Every moment with you has made my life more beautiful.
-This little website is my heart, made just for you. 🥹❤️
-</p>
-
-<button style="padding:15px 35px;font-size:20px;background:#ff2d75;color:white;border:none;border-radius:30px;">
-Begin Our Journey ❤️
-</button>
-
-</body>
-</html>
+<script>
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(Math.random()*3+3)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
+},300);
+</script>
