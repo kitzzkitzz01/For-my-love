@@ -123,5 +123,34 @@ h.remove();
 },300);
 </script>
 
-</body>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+setInterval(() => {
+  confetti({
+    particleCount: 3,
+    spread: 360,
+    startVelocity: 10,
+    origin: {
+      x: Math.random(),
+      y: Math.random() - 0.2
+    }
+  });
+}, 500);
+</script><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+setInterval(() => {
+  confetti({
+    particleCount: 3,
+    spread: 360,
+    startVelocity: 10,
+    origin: {
+      x: Math.random(),
+      y: Math.random() - 0.2
+    }
+  });
+}, 500);
+</script></body>
 </html>
